@@ -180,8 +180,8 @@ class Poly1305:
         result = ''.join(map(lambda i: chr(0xff & (result >> 8*i)), range(16)))
         if PY3K:
             result = result.encode("latin-1")
-        else:
-            return result
+        
+        return result
 
     def hexdigest(self):
         """
