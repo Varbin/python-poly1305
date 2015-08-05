@@ -18,7 +18,7 @@ script:
   - ls -a
   - coverage html poly1305.py
   - ls -a
-  - coverage xml .poly1305.py
+  - coverage xml poly1305.py
   - ls -a
 
 after_success:
