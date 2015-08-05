@@ -302,8 +302,14 @@ def runtests():
             f += 1
     if not f:
         print("\nAll tests successfully!")
+        return True
     else:
-        print("\nError!", file=sys.stdout)
+        print("\nError!", file=sys.stderr)
+        return False
 
 if __name__ == "__main__":
     runtests()
+    print('Extra test:', (Poly1305(testvec[0]["k"], testvec[0]["r"],
+                                 testvec[0]["n"], testvec[0]["m"]).digest()
+                          ==testvec[0]["x"])
+          )
