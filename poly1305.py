@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+# -*- encoding: utf-8 -*-
+
 """
 Poly1305-AES in python.
 
@@ -176,7 +178,10 @@ class Poly1305:
         result = (tot + enc) % (1 << 128)
         # Convert to a 16-byte string, little-endian order.
         result = ''.join(map(lambda i: chr(0xff & (result >> 8*i)), range(16)))
-        return result.encode("latin-1")
+        if PY3K:
+            result = result.encode("latin-1")
+        else:
+            return result
 
     def hexdigest(self):
         """
