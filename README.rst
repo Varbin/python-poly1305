@@ -2,6 +2,10 @@ Poly1305
 ----------------
 
 .. image:: 
+   https://travis-ci.org/Varbin/python-poly1305.svg?branch=master
+   :target: https://travis-ci.org/Varbin/python-poly1305
+
+.. image:: 
    http://codecov.io/github/Varbin/python-poly1305/coverage.svg?branch=master 
    :target: http://codecov.io/github/Varbin/python-poly1305?branch=master
 
