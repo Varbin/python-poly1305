@@ -1,6 +1,10 @@
 Poly1305
 ----------------
 
+.. image:: 
+   http://codecov.io/github/Varbin/python-poly1305/coverage.svg?branch=master 
+   :target: http://codecov.io/github/Varbin/python-poly1305?branch=master
+
 A package providing DJK's Poly1305 algorithms, on the top of PyCrypto,
 cryptography or m2crypto (m2crypto may not work correctly).
 
