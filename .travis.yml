@@ -7,8 +7,13 @@ python:
   - "3.5.0b3"
   - "pypy"
 
-# command to install dependencies
-install: "python setup.py install"
+install: 
+  - python setup.py install
+  - pip install codecov
 
-# command to run tests
-script: "python poly1305.py"
+script: 
+  - python poly1305.py
+  - coverage run poly1305.py
+
+after_success:
+  - codecov
