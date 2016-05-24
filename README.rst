@@ -10,7 +10,11 @@ Poly1305
    :target: http://codecov.io/github/Varbin/python-poly1305?branch=master
 
 A package providing DJK's Poly1305 algorithms, on the top of PyCrypto,
-cryptography or m2crypto (m2crypto may not work correctly).
+cryptography or m2crypto (m2crypto may not work correctly), working 
+with Python 2 and 3.
+
+It's a fork of `this <https://cr.yp.to/mac/poly1305aes.py>`_ from
+Ken Raeburn.
 
 Example
 ---------------
@@ -24,7 +28,7 @@ Basic usage:
     >>> nonce = os.urandom(16)
     >>> poly1305aes(b" "*16, b" "*16, nonce, b"secret"*7)
 
-If AES should insecure in the future, you could easily switch to another
+If AES should be insecure in the future, you could easily switch to another
 blockcipher:
 
 .. code:: python
