@@ -165,6 +165,7 @@ class Poly1305:
                         self.__nonce, self.__string)
         mod1305 = (1 << 130) - 5
         rval = str2num_littleend(r)
+        rval &= 0x0ffffffc0ffffffc0ffffffc0fffffff
         q = (len(msg) + 15) / 16
         tot = 0
         for i in range(int(q)):
